@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/galeria.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="content">
+      <div class="logo">
+        <a href="#"> INVESTIGACION APLICADA #1 DAW</a>
+      </div>
+      <ul class="menu-list">
+        <div class="icon cancel-btn">
+          <i class="fas fa-times"></i>
+        </div>
+        <li class="menu-selected"><a href="#" >Inicio</a></li>
+        <li><a href="about.html">FUNCIONES FLECHA</a></li>
+        <li><a href="ejemplo.html">EJEMPLO</a></li>
+        <li><a href="audio.html">OPERADOR SPRING</a></li>
+        <li><a href="Operador.spread.html">EJEMPLO</a></li>
+
+      </ul>
+      <div class="icon menu-btn">
+        <i class="fas fa-bars"></i>
+      </div>
+    </div>
+  </nav>
+  <div class="banner"></div>
+  <div class="about">
+    <div class="content">
+      <div class="title">INVESTIGACION - ¿QUE ES LINTING?</div>
+      <br></br>
+      <img src="img/logo.png" class="imglogo">
+      <p> Primeramente ESLint es una herramienta de código abierto enfocada en el proceso de <b>linting</b> para javascript, esta es una herramienta predominante para la tarea de <b>limpiar</b> código javascript tanto en el servidor (node.js) como en el navegador. En otras palabras, es una herramienta de software que <b>observa</b> y <b>revisa</b> tu código en busca de errores que puedan afectar tu código, y existen algunos que incluso pueden darte sugerencias de como arreglar el error o incluso arreglarlo ellos mismos.</p>
+      <p>Dado que javascript es un lenguaje dinámico y de tipado débil, es especialmente fácil caer en errores humanos a la hora de escribir código. ESLint utiliza un sistema de reglas que permiten definir que es y que no es posible dentro del código.</p>
+      <p>El uso más simple que puedes darle a ESLint es revisar tu código de forma manual ejecutando un script en la terminal, para esto puedes escribir <b>npx eslint --ext .js</b> cada vez o configurar este comando como un script.</p>
+    </div>
+  </div>
+  <div class="galeria">
+    <div class="title">BUENAS PRACTICAS DE EDICION DE CODIGO EN JS</div>
+    <br></br>
+    <div class="contenedor-imagenes">
+        <div class="imagen">
+            <img src="img/img1.png" alt="">
+            <div class="overlay">
+                <h2>Utilizar estilo camelCase </h2>
+            </div>
+        </div>
+        <div class="imagen">
+            <img src="img/img2.jpg" alt="">
+            <div class="overlay">
+                <h2>Utiliza JS Lint </h2>
+            </div>
+        </div>
+        <div class="imagen">
+            <img src="img/img3.jpg" alt="">
+            <div class="overlay">
+                <h2>Comenta tu código</h2>
+            </div>
+        </div>
+        <div class="imagen">
+            <img src="img/img4.jpg" alt="">
+            <div class="overlay">
+                <h2>Utiliza siempre el punto y coma</h2>
+            </div>
+        </div>
+        <div class="imagen">
+            <img src="img/img5.jpg" alt="">
+            <div class="overlay">
+                <h2>Leer mucho</h2>
+            </div>
+        </div>
+        <div class="imagen">
+            <img src="img/img6.jpg" alt="">
+            <div class="overlay">
+                <h2>Ocupar buena semantica</h2>
+            </div>
+        </div>
+        
+    </div>
+</div>
+
+
+
+  <footer>
+      <div class="logo-footer">
+          <img src="img/footer.png" alt="">
+      </div>
+      <h4>© 2022 DAW DSF COLEGIO DON BOSCO- Todos los Derechos Reservados.</h4>
+
+  </footer>
+
+  <script>
+    const body = document.querySelector("body");
+    const navbar = document.querySelector(".navbar");
+    const menuBtn = document.querySelector(".menu-btn");
+    const cancelBtn = document.querySelector(".cancel-btn");
+    menuBtn.onclick = ()=>{
+      menuBtn.classList.add("hide");       
+      body.classList.add("disabled");            
+      navbar.classList.add("show");
+    }
+
+    cancelBtn.onclick = ()=>{
+      menuBtn.classList.remove("hide");    
+      body.classList.remove("disabled");    
+      navbar.classList.remove("show");
+    }
+    window.onscroll = ()=>{
+      this.scrollY > 20 ? navbar.classList.add("sticky") : navbar.classList.remove("sticky");
+    }
+  </script>
+
+</body>
+</html>

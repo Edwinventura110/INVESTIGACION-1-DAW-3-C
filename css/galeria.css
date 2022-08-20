@@ -1,0 +1,75 @@
+/*Estilos galeria*/
+
+*{
+  margin:0;
+  padding: 0;
+  box-sizing: border-box;
+} 
+
+.galeria{
+    font-family: 'open sans';
+    background: rgb(0,54,158);
+    background: linear-gradient(90deg, rgb(208, 245, 0) 0%, rgb(11, 47, 207) 100%);
+  }
+  
+  .galeria h1{
+    text-align: center;
+    margin:20px 0 15px 0;
+    font-weight: 300;
+  }
+  
+  .title{
+    font-size: 35px;
+    font-weight: 700;
+    text-align: center;
+  }
+  
+  .contenedor-imagenes{
+    display:flex;
+    width: 85%;
+    margin: auto;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    border-radius:3px;
+  }
+  
+  .contenedor-imagenes .imagen{
+    width: 32%;
+    position: relative;
+    height:250px;
+    margin-bottom:5px;
+    box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, .75)
+  }
+  .imagen img{
+    width: 100%;
+    height:100%;
+    object-fit: cover;
+  }
+  
+  .overlay{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background:rgba(111, 154, 180, 0.781) ;
+    width: 100%;
+    height: 0;
+    overflow: hidden;
+    transition: .5s ease;
+  }
+  
+  .overlay h2{
+    color: #fff;
+    font-weight: 300;
+    font-size:30px;
+    position: absolute;
+    top: 50%;
+    left:50%;
+    text-align: center;
+    transform: translate(-50%, -50%);
+  }
+  
+  .imagen:hover .overlay{
+    height:100%;
+    cursor: pointer;
+  }
+  

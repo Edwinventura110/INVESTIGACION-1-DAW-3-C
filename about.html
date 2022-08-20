@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acerca de</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="content">
+          <div class="logo">
+            <a href="#"> INVESTIGACION APLICADA #1 DAW</a>
+          </div>
+          <ul class="menu-list">
+            <div class="icon cancel-btn">
+              <i class="fas fa-times"></i>
+            </div>
+            <li><a href="index.html" >Inicio</a></li>
+            <li class="menu-selected"><a href="#">FUNCIONES FLECHA</a></li>
+            <li><a href="ejemplo.html">EJEMPLO</a></li>
+            <li ><a href="audio.html">OPERADOR SPRING</a></li>
+            <li><a href="Operador spread.html">EJEMPLO</a></li>
+          </ul>
+          <div class="icon menu-btn">
+            <i class="fas fa-bars"></i>
+          </div>
+        </div>
+      </nav>
+      <div class="banner"></div>
+      <div class="about">
+        <div class="content">
+          <div class="title">INVESTIGACION - FUNCIONES FLECHA </div>
+           <br></br>
+      <img src="img/fondo2.jpg" class="imglogo">
+          <p> Las funciones flecha son funciones anónimas con una sintaxis más compacta y que aparte de la diferencia en la sintaxis también tienen algunas peculiaridades como que no se vinculan o que no se pueden usar como constructores.</p>
+          <p>Esta funcion es de tipo anónima y por lo tanto si queremos poder llamar a nuestra función debemos de asignársela a una variable, y aunque esta asignación no forma parte de la definición de una función flecha en la práctica lo tendremos que hacer siempre que no estemos asignando la función flecha a otra función directamente.</p>
+          <p class="title"><b>¿Cuando utilizar una funcion flecha?</b></p>
+          <p>Utiliza las funciones clásicas <b>function</b> en el ámbito global y para las propiedades definidas como Object.prototype.</p>
+          <p>Para el resto de las funciones, salvo cuando se define un constructor, que deberás utilizar class, se pueden utilizar funciones flecha siempre y cuando sus particulares características no te impidan crearla. </p>
+      <img src="img/ejemplo.png" class="imglogo">
+      <br></br>
+      <code><b>var suma = (numero1, numero2) => numero1 + numero2</b></code>
+      <p>Por lo tanto, podemos ver las funciones flecha como un flujo en el que dados unos parámetros (parte izquierda) nos devuelve un resultado (parte derecha)</p>
+      </div>
+  <footer>
+    <div class="logo-footer">
+        <img src="img/footer.png" alt="">
+    </div>
+    <h4>© 2022 DAW DSF COLEGIO DON BOSCO- Todos los Derechos Reservados.</h4>
+
+</footer>
+  
+
+<script>
+    const body = document.querySelector("body");
+    const navbar = document.querySelector(".navbar");
+    const menuBtn = document.querySelector(".menu-btn");
+    const cancelBtn = document.querySelector(".cancel-btn");
+    menuBtn.onclick = ()=>{
+      navbar.classList.add("show");
+      menuBtn.classList.add("hide");
+      body.classList.add("disabled");
+    }
+    cancelBtn.onclick = ()=>{
+      body.classList.remove("disabled");
+      navbar.classList.remove("show");
+      menuBtn.classList.remove("hide");
+    }
+    window.onscroll = ()=>{
+      this.scrollY > 20 ? navbar.classList.add("sticky") : navbar.classList.remove("sticky");
+    }
+  </script>
+</body>
+</html>
